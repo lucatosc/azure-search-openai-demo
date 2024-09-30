@@ -1,6 +1,6 @@
 # ChatGPT-like app with your data using Azure OpenAI and Azure AI Search (Python)
 
-This solution's backend is written in Python. There are also [**JavaScript**](https://aka.ms/azai/js/code), [**.NET**](https://aka.ms/azai/net/code), and [**Java**](https://aka.ms/azai/java/code) samples based on this one. Learn more about [developing AI apps using Azure AI Services](https://aka.ms/azai).
+This solution's backend is written in Python. There are also 
 
 [![Open in GitHub Codespaces](https://img.shields.io/static/v1?style=for-the-badge&label=GitHub+Codespaces&message=Open&color=brightgreen&logo=github)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=599293758&machine=standardLinux32gb&devcontainer_path=.devcontainer%2Fdevcontainer.json&location=WestUs2)
 [![Open in Dev Containers](https://img.shields.io/static/v1?style=for-the-badge&label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/azure-samples/azure-search-openai-demo)
@@ -29,7 +29,7 @@ This solution's backend is written in Python. There are also [**JavaScript**](ht
 
 ![Chat screen](docs/images/chatscreen.png)
 
-[📺 Watch a video overview of the app.](https://youtu.be/3acB0OWmLvM)
+[📺 Watch a video overview of the app.]
 
 This sample demonstrates a few approaches for creating ChatGPT-like experiences over your own data using the Retrieval Augmented Generation pattern. It uses Azure OpenAI Service to access a GPT model (gpt-35-turbo), and Azure AI Search for data indexing and retrieval.
 
@@ -49,16 +49,6 @@ The repo includes sample data so it's ready to try end to end. In this sample ap
 ### Architecture Diagram
 
 ![RAG Architecture](docs/images/appcomponents.png)
-
-## Azure account requirements
-
-**IMPORTANT:** In order to deploy and run this example, you'll need:
-
-- **Azure account**. If you're new to Azure, [get an Azure account for free](https://azure.microsoft.com/free/cognitive-search/) and you'll get some free Azure credits to get started. See [guide to deploying with the free trial](docs/deploy_lowcost.md).
-- **Azure subscription with access enabled for the Azure OpenAI service**. You can request access with [this form](https://aka.ms/oaiapply). If your access request to Azure OpenAI service doesn't match the [acceptance criteria](https://learn.microsoft.com/legal/cognitive-services/openai/limited-access?context=%2Fazure%2Fcognitive-services%2Fopenai%2Fcontext%2Fcontext), you can use [OpenAI public API](https://platform.openai.com/docs/api-reference/introduction) instead. Learn [how to switch to an OpenAI instance](docs/deploy_existing.md#openaicom-openai).
-- **Azure account permissions**:
-  - Your Azure account must have `Microsoft.Authorization/roleAssignments/write` permissions, such as [Role Based Access Control Administrator](https://learn.microsoft.com/azure/role-based-access-control/built-in-roles#role-based-access-control-administrator-preview), [User Access Administrator](https://learn.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator), or [Owner](https://learn.microsoft.com/azure/role-based-access-control/built-in-roles#owner). If you don't have subscription-level permissions, you must be granted [RBAC](https://learn.microsoft.com/azure/role-based-access-control/built-in-roles#role-based-access-control-administrator-preview) for an existing resource group and [deploy to that existing group](docs/deploy_existing.md#resource-group).
-  - Your Azure account also needs `Microsoft.Resources/deployments/write` permissions on the subscription level.
 
 ### Cost estimation
 
@@ -107,7 +97,7 @@ A related option is VS Code Dev Containers, which will open the project in your 
 
 1. Install the required tools:
 
-    - [Azure Developer CLI](https://aka.ms/azure-dev/install)
+    - [Azure Developer CLI]
     - [Python 3.9, 3.10, or 3.11](https://www.python.org/downloads/)
       - **Important**: Python and the pip package manager must be in the path in Windows for the setup scripts to work.
       - **Important**: Ensure you can run `python --version` from console. On Ubuntu, you might need to run `sudo apt install python-is-python3` to link `python` to `python3`.
@@ -251,11 +241,11 @@ to production. Read through our [productionizing guide](docs/productionizing.md)
 
 Here are the most common failure scenarios and solutions:
 
-1. The subscription (`AZURE_SUBSCRIPTION_ID`) doesn't have access to the Azure OpenAI service. Please ensure `AZURE_SUBSCRIPTION_ID` matches the ID specified in the [OpenAI access request process](https://aka.ms/oai/access).
+1. The subscription (`AZURE_SUBSCRIPTION_ID`) doesn't have access to the Azure OpenAI service. Please ensure `AZURE_SUBSCRIPTION_ID` matches the ID specified in the [OpenAI access request process].
 
-1. You're attempting to create resources in regions not enabled for Azure OpenAI (e.g. East US 2 instead of East US), or where the model you're trying to use isn't enabled. See [this matrix of model availability](https://aka.ms/oai/models).
+1. You're attempting to create resources in regions not enabled for Azure OpenAI (e.g. East US 2 instead of East US), or where the model you're trying to use isn't enabled. See [this matrix of model availability].
 
-1. You've exceeded a quota, most often number of resources per region. See [this article on quotas and limits](https://aka.ms/oai/quotas).
+1. You've exceeded a quota, most often number of resources per region. See [this article on quotas and limits].
 
 1. You're getting "same resource name not allowed" conflicts. That's likely because you've run the sample multiple times and deleted the resources you've been creating each time, but are forgetting to purge them. Azure keeps resources for 48 hours unless you purge from soft delete. See [this article on purging resources](https://learn.microsoft.com/azure/cognitive-services/manage-resources?tabs=azure-portal#purge-a-deleted-resource).
 
@@ -266,18 +256,17 @@ Here are the most common failure scenarios and solutions:
 ### Resources
 
 - [Additional documentation for this app](docs/README.md)
-- [📖 Revolutionize your Enterprise Data with ChatGPT: Next-gen Apps w/ Azure OpenAI and AI Search](https://aka.ms/entgptsearchblog)
+- [📖 Revolutionize your Enterprise Data with ChatGPT: Next-gen Apps w/ Azure OpenAI and AI Search]
 - [📖 Azure AI Search](https://learn.microsoft.com/azure/search/search-what-is-azure-search)
 - [📖 Azure OpenAI Service](https://learn.microsoft.com/azure/cognitive-services/openai/overview)
 - [📖 Comparing Azure OpenAI and OpenAI](https://learn.microsoft.com/azure/cognitive-services/openai/overview#comparing-azure-openai-and-openai/)
 - [📖 Access Control in Generative AI applications with Azure Cognitive Search](https://techcommunity.microsoft.com/t5/ai-azure-ai-services-blog/access-control-in-generative-ai-applications-with-azure/ba-p/3956408)
-- [📺 Quickly build and deploy OpenAI apps on Azure, infused with your own data](https://www.youtube.com/watch?v=j8i-OM5kwiY)
-- [📺 AI Chat App Hack series](https://www.youtube.com/playlist?list=PL5lwDBUC0ag6_dGZst5m3G72ewfwXLcXV)
+- [📺 Quickly build and deploy OpenAI apps on Azure, infused with your own data]
 
 ### Getting help
 
 This is a sample built to demonstrate the capabilities of modern Generative AI apps and how they can be built in Azure.
-For help with deploying this sample, please post in [GitHub Issues](/issues). If you're a Microsoft employee, you can also post in [our Teams channel](https://aka.ms/azai-python-help).
+For help with deploying this sample, please post in [GitHub Issues](/issues). If you're a Microsoft employee, you can also post in [our Teams channel].
 
 This repository is supported by the maintainers, _not_ by Microsoft Support,
 so please use the support mechanisms described above, and we will do our best to help you out.
